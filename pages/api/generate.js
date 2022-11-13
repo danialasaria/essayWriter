@@ -6,7 +6,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 //completion endpoint with temperature of 0.6
-//1 token generally corresponds to abbout 4 characters of common english text (default to 16)
+//1 token generally corresponds to abbout 4 characters of common english text (default to 16 tokens)
 export default async function (req, res) {
   const completion = await openai.createCompletion({
     model: "text-davinci-002",
